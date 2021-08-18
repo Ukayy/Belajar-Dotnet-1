@@ -1,0 +1,36 @@
+﻿@model EmployeeApp.Models.Employee
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 class="text-center">Delete Employee</h2>
+<form action="DeleteEmployee" method="post">
+    <div class="Conteiner mt-3 text-center">
+        <div class="form-group col">
+            <input asp-for="Id" hidden />
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" disabled asp-for="Name" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Position</label>
+                <div class="col-sm-10">
+                    <input class="form-control" disabled asp-for="Position" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Age</label>
+                <div class="col-sm-10">
+                    <input class="form-control" disabled asp-for="age" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group rows">
+            <Button type="submit" class="btn btn-danger w-30" asp-controller="Employee" asp-action="DeleteEmployee">Delete</Button>
+            <a class="btn btn-primary w-30" asp-controller="Employee" asp-action="Index">Back</a>
+        </div>
+    </div>
+</form>
